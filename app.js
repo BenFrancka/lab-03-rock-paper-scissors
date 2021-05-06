@@ -70,7 +70,7 @@ playButton.addEventListener('click', () => {
     } 
 });
 
-//event listener to reset state to original and clear displays
+//event listener to reset state to original and clear displays/display total resets
 resetButton.addEventListener('click', () => {
 
     //set original state
