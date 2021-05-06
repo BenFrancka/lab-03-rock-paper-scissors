@@ -69,8 +69,8 @@ label {
     justify-content: center;
     padding: 1rem;
     font-size: 2rem;
-    color: var(--color1);
-    text-decoration: underline red;
+    color: blue;
+    text-decoration: underline blue;
 }
 
 .play-button {
