@@ -81,8 +81,11 @@ button {
     
 }
 
-input:checked {
-    border: 1px solid red;
+input {
+    display: none;
+}
+input:checked + img {
+    border: 8px solid red;
 }
 
 .results-display {
