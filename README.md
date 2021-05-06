@@ -9,3 +9,46 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+## HTML
+    - Radio Buttons for Rock, Paper and Scissors
+    - 2 divs
+        - one for total win/loss/draw display
+        - one for the results of each game (human or computer won?)
+    - button to play a round
+        - run event listener on click
+
+## Initialize State
+    - Wins: 0
+    - Losses: 0
+    - Draws: 0
+    - Computer choice: rock | paper | scissors
+
+## Events
+    -   On button click:
+        - throw a round to get computer choice
+            - change computer choice state
+        - get user choice from radio button
+        - compare usuer choice to computer choice
+        - update state:
+            - update wins/losses/draws
+        - present results of round and total wins/losses/draws
+
+## rockPaperScissors funciton
+    - will need to compare (userThrow, computerThrow)
+        - userThrow === rock && computerThrow === scissors
+        - userThrow === scissors && computerThrow === paper
+        - userThrow === paper &&& computerThrow === rock
+            - return: win
+
+        - else: userThrow === computerThrow 
+            - return: draw
+        
+        - else 
+            - return: loss
+
+## getRandomThrow function
+    - place in get-random-throw.js
+    - Math.ceil(Math.random() * 3);
+        - if === 1, return: 'rock'
+        - if === 2, return: 'paper'
+        - if === 3, return: 'scissors'

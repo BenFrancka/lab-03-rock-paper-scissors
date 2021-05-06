@@ -19,95 +19,64 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
-}
-
-section {
-    background-color: var(--color5);
-    width: 1000px;
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
-}
-
-header {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
-}
-
-footer {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-}
-
-
-h2 {
-    font-size: 1.8rem;
+    background-image: url("../assets/background.png");
+    color: rgb(143, 221, 143);
     font-weight: bold;
 }
-
-.gutter-right {
-    margin-right: 20px;
+img {
+    width: 100px;
+    height: 100px;
 }
 
-.main-logo {
-    animation: pulse 5s infinite ease-in-out;
-}
-
-header img {
-    height: var(--header-height);
-}
-
-p {
-    margin: var(--gutter);
-}
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
+.instructions-section {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
+    flex-direction: column;
+    align-items: center;
+    border: solid green;
+    background-color: rgba(128, 128, 128, 0.644);
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
 
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
+h1, h2 {
+    padding: 1rem;
+}
 
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
+h1 {
+    font-size: 3rem;
+}
 
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
+h2 {
+    font-size: 2rem;
+}
 
-  }
+ul {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 2rem;
+    color:rgb(245, 16, 16)
+}
+
+.play-button {
+    display: flex;
+    justify-content: center;
+    
+}
+
+button {
+    font-size: 3rem;
+    color:rgb(143, 221, 143);
+    background-color: rgba(71, 69, 69, 0.596);
+    border: 4px outset green;
+    border-radius: 25%
+    
+}
+

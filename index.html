@@ -13,60 +13,60 @@
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
-        </div>
-    </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png" />
+        <!--Informational Section with Instructions for game-->
+        <div class= "instructions-section">
+            <h1>
+                Rock, Paper, Scissors: Cyber Edition
+            </h1>
             <h2>
-                Welcome to Alchemy Bootstrap!
+                test your human hands against the machine
             </h2>
+            <ul>
+                <li>rock crushes scissors</li>
+                <li>scissors cuts paper</li>
+                <li>paper covers rock</li>
+                <li>if both sides choose the same, the round is a draw</li>
+            </ul>
+        </div>
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
+        <!--Section with 3 radio buttons for each option-->
+        <div class= "raido-buttons">
 
-        </section>
+            <!--rock-->
+            <label>
+                Rock
+                <input name= "r-p-s" type= "radio">
+                <img src= "assets/rock.png">
+            </label>
+
+            <!--paper-->
+            <label>
+                Paper
+                <input name= "r-p-s" type= "radio">
+                <img src= "assets/paper.png">
+            </label>
+
+            <!--scissors-->
+            <label>
+                Scissors
+                <input name= "r-p-s" type= "radio">
+                <img src= "assets/scissors.png">
+            </label>
+
+        </div>
+
+        <!--section with button to activate a round of play-->
+        <div id= "play-button" class= "play-button">
+            <button>Play the Machine!</button>
+        </div>
+
+        <!--section with game results-->
+        <div class= "results display">
+            <h2 id= "win-lose-draw"></h2>
+            <h2 id= "game-results"></h2>
+        </div>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
-
     <script type="module" src="./app.js"></script>
 </body>
 
