@@ -24,6 +24,9 @@ body {
 
 main {
     background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
     color: rgb(104, 241, 104);
     font-weight: bold;
     font-family: monospace;
