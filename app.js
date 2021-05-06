@@ -10,12 +10,13 @@ const totalLossesDisplay = document.querySelector('#total-losses');
 const totalDrawsDisplay = document.querySelector('#total-draws');
 const gameResults = document.querySelector('#game-results');
 const resetButton = document.querySelector('#reset-button');
+const resetTracker = document.querySelector('#reset-tracker');
 
 // initialize state
 let totalWins= 0;
 let totalDraws= 0;
 let totalLosses= 0;
-
+let totalResets= 0;
 
 
 // set event listeners to update state and DOM
@@ -84,4 +85,10 @@ resetButton.addEventListener('click', () => {
      totalDrawsDisplay.textContent = '';
      totalLossesDisplay.textContent = '';
      gameResults.textContent = '';
+
+     //increment total resets
+     totalResets++;
+
+     //display total resets
+     resetTracker.textContent= `'The Machine sees you have cheated ${totalResets} times'`;
 });
