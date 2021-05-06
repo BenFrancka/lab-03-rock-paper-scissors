@@ -80,3 +80,7 @@ button {
     
 }
 
+input:checked {
+    border: 1px solid red;
+}
+

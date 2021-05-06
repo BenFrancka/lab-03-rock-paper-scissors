@@ -36,34 +36,48 @@
             <!--rock-->
             <label>
                 Rock
-                <input name= "r-p-s" type= "radio">
+                <input 
+                    name= "r-p-s"
+                    type= "radio"
+                    value= "rock"
+                />
                 <img src= "assets/rock.png">
             </label>
 
             <!--paper-->
             <label>
                 Paper
-                <input name= "r-p-s" type= "radio">
+                <input 
+                    name= "r-p-s" 
+                    type= "radio"
+                    value= "paper"
+                />
                 <img src= "assets/paper.png">
             </label>
 
             <!--scissors-->
             <label>
                 Scissors
-                <input name= "r-p-s" type= "radio">
+                <input 
+                    name= "r-p-s" 
+                    type= "radio"
+                    value= "scissors"
+                />
                 <img src= "assets/scissors.png">
             </label>
 
         </div>
 
         <!--section with button to activate a round of play-->
-        <div id= "play-button" class= "play-button">
-            <button>Play the Machine!</button>
+        <div class= "play-button">
+            <button id= "play-a-round-button">Play the Machine!</button>
         </div>
 
         <!--section with game results-->
         <div class= "results display">
-            <h2 id= "win-lose-draw"></h2>
+            <h2 id= "total-wins"></h2>
+            <h2 id = "total-losses"></h2>
+            <h2 id = "total-draws"></h2>
             <h2 id= "game-results"></h2>
         </div>
     </main>
