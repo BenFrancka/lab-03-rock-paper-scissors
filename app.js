@@ -90,5 +90,5 @@ resetButton.addEventListener('click', () => {
      totalResets++;
 
      //display total resets
-     resetTracker.textContent= `'The Machine sees you have cheated ${totalResets} times'`;
+     resetTracker.textContent= `'The Machine is tracking your futile attempts to cheat: ${totalResets}'`;
 });
