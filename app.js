@@ -9,7 +9,7 @@ const totalWinsDisplay = document.querySelector('#total-wins');
 const totalLossesDisplay = document.querySelector('#total-losses');
 const totalDrawsDisplay = document.querySelector('#total-draws');
 const gameResults = document.querySelector('#game-results');
-
+const resetButton = document.querySelector('#reset-button');
 
 // initialize state
 let totalWins= 0;
@@ -56,7 +56,7 @@ playButton.addEventListener('click', () => {
         totalDrawsDisplay.textContent = `'Total Draws: ${totalDraws}'`;
 
         //display round results
-        gameResults.textContent = "You and the Computer are as equals";
+        gameResults.textContent = 'You and the Computer are as equals';
 
         //results for user loss
     } else if(roundResults === 'computer') {
@@ -69,4 +69,19 @@ playButton.addEventListener('click', () => {
         //display round results
         gameResults.textContent = "The Machine has Bested You. Rage against the Machine.";
     } 
+});
+
+//event listener to reset state to original and clear displays
+resetButton.addEventListener('click', () => {
+
+    //set original state
+     totalWins= 0;
+     totalDraws= 0;
+     totalLosses= 0;
+
+     //clear results displays
+     totalWinsDisplay.textContent = '';
+     totalDrawsDisplay.textContent = '';
+     totalLossesDisplay.textContent = '';
+     gameResults.textContent = '';
 });

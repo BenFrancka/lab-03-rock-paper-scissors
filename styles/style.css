@@ -63,7 +63,7 @@ label {
     justify-content: center;
     padding: 1rem;
     font-size: 2rem;
-    color:rgb(245, 16, 16)
+    color:rgb(245, 16, 16);
 }
 
 .play-button {
@@ -77,8 +77,15 @@ button {
     color:rgb(143, 221, 143);
     background-color: rgba(71, 69, 69, 0.596);
     border: 4px outset green;
-    border-radius: 25%
-    
+    border-radius: 25%;
+}
+
+#reset-button {
+    font-size: 1rem;
+    color: rgb(245, 16, 16);
+    background-color:rgb(143, 221, 143);
+    border-radius: 50%;
+
 }
 
 input {
