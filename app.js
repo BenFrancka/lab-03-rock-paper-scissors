@@ -1,5 +1,5 @@
 // import functions 
-import { didUserWin } from './utils.js';
+import { didUserWin, getRandomThrow } from './utils.js';
 
 //grab DOM elements
 //const radioSelection = document.querySelector('input[type=radio]:checked');
@@ -8,30 +8,35 @@ const playButton = document.querySelector('#play-a-round-button');
 const totalWinsDisplay = document.querySelector('#total-wins');
 const totalLossesDisplay = document.querySelector('#total-losses');
 const totalDrawsDisplay = document.querySelector('#total-draws');
-const roundResults = document.querySelector('#game-results');
+const gameResults = document.querySelector('#game-results');
 
 
 // initialize state
 let totalWins= 0;
-let totalLosses= 0;
 let totalDraws= 0;
+let totalLosses= 0;
+
 
 
 // set event listeners to update state and DOM
 playButton.addEventListener('click', () => {
 
     //get radio button selection
-    const radioChoice = document.querySelector('input.checked');
+    const radioChoice = document.querySelector('input:checked');
 
     //define player selection
-    const userThrow = radioChoice.nodeValue;
+    const userThrow = radioChoice.value;
 
-    //generate random computer throw
-    const computerThrow = Math.ceil(Math.random() * 3);
+    //generate random computer number
+    const computerNumber = Math.ceil(Math.random() * 3);
+
+    //convert computer number into r/p/s string
+    const computerThrow = getRandomThrow(computerNumber);
     
     //calculate the reusults of the round
     const roundResults = didUserWin(userThrow, computerThrow);
 
+    //results for user win
     if(roundResults === 'user') {
         //increment total wins
         totalWins++;
@@ -40,10 +45,28 @@ playButton.addEventListener('click', () => {
         totalWinsDisplay.textContent = `'Total Wins: ${totalWins}'`;
 
         //display round results
-        roundResults.textContent = "You Have Defeated the Machine";
-    } else if(rounResults === 'draw') 
-    
+        gameResults.textContent = "You Have Defeated the Machine";
 
+        //results for user draw
+    } else if(roundResults === 'draw') {
+        //increment total draws
+        totalDraws++;
 
-    
+        //display total draws
+        totalDrawsDisplay.textContent = `'Total Draws: ${totalDraws}'`;
+
+        //display round results
+        gameResults.textContent = "You and the Computer are as equals";
+
+        //results for user loss
+    } else if(roundResults === 'computer') {
+        //increment total losses
+        totalLosses++;
+
+        //display total losses
+        totalLossesDisplay.textContent = `'Total Losses: ${totalLosses}'`;
+
+        //display round results
+        gameResults.textContent = "The Machine has Bested You. Rage against the Machine.";
+    } 
 });

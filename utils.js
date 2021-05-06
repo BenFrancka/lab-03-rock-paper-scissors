@@ -1,4 +1,4 @@
-export { didUserWin };
+export { didUserWin, getRandomThrow };
 
 function didUserWin(userThrow, computerThrow) {
    if (
@@ -12,4 +12,16 @@ function didUserWin(userThrow, computerThrow) {
    } else {
        return 'computer';
    }  
+}
+
+function getRandomThrow(computerChoice) {
+
+    if(computerChoice === 1)
+        return 'rock';
+    
+    if(computerChoice === 2)
+        return 'paper';
+    
+    if(computerChoice === 3)
+        return 'scissors';
 }
