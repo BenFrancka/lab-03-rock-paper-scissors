@@ -2,8 +2,6 @@
 import { didUserWin, getRandomThrow } from './utils.js';
 
 //grab DOM elements
-//const radioSelection = document.querySelector('input[type=radio]:checked');
-//const userThrow = radioSelection.value;
 const playButton = document.querySelector('#play-a-round-button');
 const totalWinsDisplay = document.querySelector('#total-wins');
 const totalLossesDisplay = document.querySelector('#total-losses');
