@@ -11,10 +11,10 @@ const resetButton = document.querySelector('#reset-button');
 const resetTracker = document.querySelector('#reset-tracker');
 
 // initialize state
-let totalWins= 0;
-let totalDraws= 0;
-let totalLosses= 0;
-let totalResets= 0;
+let totalWins = 0;
+let totalDraws = 0;
+let totalLosses = 0;
+let totalResets = 0;
 
 
 // set event listeners to update state and DOM
@@ -26,28 +26,24 @@ playButton.addEventListener('click', () => {
     //define player selection
     const userThrow = radioChoice.value;
 
-    //generate random computer number
-    const computerNumber = Math.ceil(Math.random() * 3);
-
-    //convert computer number into r/p/s string
-    const computerThrow = getRandomThrow(computerNumber);
+    const computerThrow = getRandomThrow();
     
     //calculate the reusults of the round
     const roundResults = didUserWin(userThrow, computerThrow);
 
     //results for user win
-    if(roundResults === 'user') {
+    if (roundResults === 'user') {
         //increment total wins
         totalWins++;
 
         //display total wins
-        totalWinsDisplay.textContent = `'Total Wins: ${totalWins}'`;
+        totalWinsDisplay.textContent = `Total Wins: ${totalWins}`;
 
         //display round results
-        gameResults.textContent = "You Have Defeated the Machine";
+        gameResults.textContent = 'You Have Defeated the Machine.';
 
         //results for user draw
-    } else if(roundResults === 'draw') {
+    } else if (roundResults === 'draw') {
         //increment total draws
         totalDraws++;
 
@@ -55,18 +51,18 @@ playButton.addEventListener('click', () => {
         totalDrawsDisplay.textContent = `'Total Draws: ${totalDraws}'`;
 
         //display round results
-        gameResults.textContent = 'You and the Computer are as equals';
+        gameResults.textContent = 'You and the Computer are as equals.';
 
         //results for user loss
-    } else if(roundResults === 'computer') {
+    } else if (roundResults === 'computer') {
         //increment total losses
         totalLosses++;
 
         //display total losses
-        totalLossesDisplay.textContent = `'Total Losses: ${totalLosses}'`;
+        totalLossesDisplay.textContent = `Total Losses: ${totalLosses}`;
 
         //display round results
-        gameResults.textContent = "The Machine has Bested You. Rage against the Machine.";
+        gameResults.textContent = 'The Machine has Bested You. Rage against the Machine.';
     } 
 });
 
@@ -74,19 +70,19 @@ playButton.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
 
     //set original state
-     totalWins= 0;
-     totalDraws= 0;
-     totalLosses= 0;
+    totalWins = 0;
+    totalDraws = 0;
+    totalLosses = 0;
 
      //clear results displays
-     totalWinsDisplay.textContent = '';
-     totalDrawsDisplay.textContent = '';
-     totalLossesDisplay.textContent = '';
-     gameResults.textContent = '';
+    totalWinsDisplay.textContent = '';
+    totalDrawsDisplay.textContent = '';
+    totalLossesDisplay.textContent = '';
+    gameResults.textContent = '';
 
      //increment total resets
-     totalResets++;
+    totalResets++;
 
      //display total resets
-     resetTracker.textContent= `'The Machine is tracking your futile attempts to cheat: ${totalResets}'`;
+    resetTracker.textContent = `The Machine is tracking your futile attempts to cheat: ${totalResets}`;
 });
